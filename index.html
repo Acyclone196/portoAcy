@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Editor — Video Editor Portfolio</title>
+  <meta name="description" content="Portofolio editor video. Showcase karya melalui video embed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">▶</span>
+        <span id="logo-text">YourName</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#works">Karya</a>
+        <a href="#about">Tentang</a>
+        <a href="#services">Layanan</a>
+        <a href="#contact" class="btn btn-sm">Hubungi Saya</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Video Editor &amp; Storyteller</p>
+          <h1>Mengubah footage menjadi <span class="grad">cerita yang berdampak</span></h1>
+          <p class="lead" id="hero-lead">
+            Saya membantu brand dan kreator menyunting video yang rapi, sinematik, dan engaging — dari short-form hingga film dokumenter.
+          </p>
+          <div class="hero-cta">
+            <a href="#works" class="btn">Lihat Karya</a>
+            <a href="#contact" class="btn btn-ghost">Diskusi Proyek</a>
+          </div>
+          <div class="hero-stats" id="hero-stats"></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img src="assets/placeholder-avatar.svg" alt="Foto profil (placeholder)" id="hero-avatar">
+            <div class="hero-badge">
+              <span class="dot"></span> Open for freelance
+            </div>
+          </div>
+          <div class="timeline-strip" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Portofolio</p>
+          <h2>Karya &amp; Showreel</h2>
+          <p class="section-desc">Klik salah satu video untuk memutar. Ganti ID video di <code>js/data.js</code>.</p>
+        </div>
+
+        <div class="filters" id="filters"></div>
+
+        <div class="works-grid" id="works-grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-frame">
+            <img src="assets/placeholder-work.svg" alt="Foto workspace (placeholder)" id="about-img">
+          </div>
+          <div class="soft-glow" aria-hidden="true"></div>
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">Tentang Saya</p>
+          <h2>Editing yang detail, alur yang kuat</h2>
+          <p id="about-body">
+            Berpengalaman menyunting berbagai format video: konten sosial media, iklan brand, wedding highlight, hingga dokumenter. Fokus saya di pacing, color grading, dan audio yang bersih supaya penonton tidak berpindah channel.
+          </p>
+          <div class="skills" id="skills"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Layanan</p>
+          <h2>Apa yang bisa saya kerjakan</h2>
+        </div>
+        <div class="services-grid" id="services-grid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section cta-section">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow">Kontak</p>
+          <h2>Punya proyek? Mari bicara</h2>
+          <p class="section-desc">Ceritakan kebutuhan video Anda — saya balas dalam 1×24 jam.</p>
+        </div>
+        <div class="cta-actions" id="cta-actions"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> <span id="footer-name">YourName</span>. Semua hak cipta dilindungi.</p>
+      <div class="footer-links" id="footer-links"></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="video-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog">
+      <button class="modal-close" data-close aria-label="Tutup video">✕</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
